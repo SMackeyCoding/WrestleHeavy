@@ -66,6 +66,7 @@
 
         #myNav {
             color: darkgoldenrod;
+            background-color: #222222;
         }
 
             #myNav:hover {
@@ -103,6 +104,7 @@
             <a href="https://localhost:44348/Wrestler">Wrestlers</a>
             <a href="https://localhost:44348/Title">Titles</a>
         }
+        <a data-toggle="modal" data-target="#aboutModal"> About</a>
         <a data-toggle="modal" data-target="#contactModal">Contact</a>
 
     </div>
@@ -118,6 +120,28 @@
                     <p>Email: s.mackey.coding@gmail.com</p>
                     <p>LinkedIn: https://www.linkedin.com/in/stephen-mackey-46287a83/</p>
                     <p>GitHub: https://github.com/SMackeyCoding</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="aboutModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">About</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This MVC project came about to test my proficiency with the MVC style and well as my all-around knowledge of 
+                    the C# language, so for this project, I needed a topic in which I was fairly knowledgable about, which happens
+                     to be pro-wrestling! From going to indie shows, TV performances, and even to Wrestlemania, 
+                    I have been interested in wrestling for quite a few years, so with my understanding of that 
+                    with my knowledge of C#, it only made sense to cater this project around pro-wrestling, and 
+                    will continue to make updates in the future.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

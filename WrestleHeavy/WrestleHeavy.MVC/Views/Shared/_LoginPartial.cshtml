@@ -1,27 +1,39 @@
 ﻿@using Microsoft.AspNet.Identity
 
 <style>
-    #nav-color {
-        color:darkgoldenrod;
-    }
+    
+   #nav-color {
+       background-color: #222222;
+       color: darkgoldenrod;
+   }
 
-    #nav-color:hover {
-        color:gold;
-    }
+   #nav-color:hover {
+       color: gold;
+   }
+
+    
 </style>
 
 @if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-    @Html.AntiForgeryToken()
+        @Html.AntiForgeryToken()
 
-    <ul class="nav navbar-nav navbar-right">
-        <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", id = "nav-color"})
-        </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()" id="nav-color">Log off</a></li>
-    </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="nav-color">
+                    Hello @User.Identity.GetUserName()!
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" style="background-color:#222222">
+                    <li >
+                        @Html.ActionLink("Change Password", "ChangePassword", "Manage", null,  new { @id = "nav-color" })
+                    </li>
+                    <li><a href="javascript:document.getElementById('logoutForm').submit()" id="nav-color">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
     }
 }
 else

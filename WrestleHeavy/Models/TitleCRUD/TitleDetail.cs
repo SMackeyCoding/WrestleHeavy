@@ -26,7 +26,7 @@ namespace Models.TitleCRUD
         public IEnumerable<SelectListItem> Promotions { get; set; }
         
         [Display(Name = "Current Champion")]
-        public int? WrestlerId { get; set; }
+        public int WrestlerId { get; set; }
         public IEnumerable<SelectListItem> Wrestlers { get; set; }
 
         [Display(Name = "Date Created")]

@@ -11,6 +11,7 @@ namespace Models.TitleCRUD
     public class TitleEdit
     {
         public int TitleId { get; set; }
+        [Display (Name ="Title Name")]
         public string TitleName { get; set; }
         [Display (Name = "Favorite")]
         public bool IsStarred { get; set; }
@@ -19,7 +20,7 @@ namespace Models.TitleCRUD
         public DateTime DateEstablished { get; set; }
 
         [Display(Name = "Current Champion")]
-        public int? WrestlerId { get; set; }
+        public int WrestlerId { get; set; }
         public IEnumerable<SelectListItem> Wrestlers { get; set; }
     }
 }

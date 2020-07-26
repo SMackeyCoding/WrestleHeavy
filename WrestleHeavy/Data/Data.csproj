@@ -125,6 +125,14 @@
     <Compile Include="Migrations\202007182051446_Percentage3.Designer.cs">
       <DependentUpon>202007182051446_Percentage3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007261544588_Int32Update1.cs" />
+    <Compile Include="Migrations\202007261544588_Int32Update1.Designer.cs">
+      <DependentUpon>202007261544588_Int32Update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007261615326_Int32Update2.cs" />
+    <Compile Include="Migrations\202007261615326_Int32Update2.Designer.cs">
+      <DependentUpon>202007261615326_Int32Update2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -156,6 +164,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007182051446_Percentage3.resx">
       <DependentUpon>202007182051446_Percentage3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007261544588_Int32Update1.resx">
+      <DependentUpon>202007261544588_Int32Update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007261615326_Int32Update2.resx">
+      <DependentUpon>202007261615326_Int32Update2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

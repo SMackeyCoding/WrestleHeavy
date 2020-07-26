@@ -45,7 +45,7 @@ namespace Services
                     .Where(e => e.OwnerId == _userId)
                     .Select(e => new TitleListItem
                     {
-                        TitleId = e.Id,
+                        TitleId = e.TitleId,
                         TitleName = e.TitleName,
                         IsStarred = e.IsStarred,
                         DateEstablished = e.DateEstablished,
@@ -62,11 +62,11 @@ namespace Services
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.Titles
-                    .Single(e => e.Id == id
+                    .Single(e => e.TitleId == id
                     && e.OwnerId == _userId);
                 return new TitleDetail
                 {
-                    TitleId = entity.Id,
+                    TitleId = entity.TitleId,
                     TitleName = entity.TitleName,
                     IsStarred = entity.IsStarred,
                     DateEstablished = entity.DateEstablished,
@@ -82,10 +82,10 @@ namespace Services
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.Titles.Single(e =>
-                e.Id == model.TitleId
+                e.TitleId == model.TitleId
                 && e.OwnerId == _userId);
 
-                entity.Id = model.TitleId;
+                //entity.TitleId = model.TitleId;
                 entity.TitleName = model.TitleName;
                 entity.IsStarred = model.IsStarred;
                 entity.DateEstablished = model.DateEstablished;
@@ -100,7 +100,7 @@ namespace Services
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.Titles.Single(e =>
-                e.Id == titleId
+                e.TitleId == titleId
                 && e.OwnerId == _userId);
 
                 ctx.Titles.Remove(entity);

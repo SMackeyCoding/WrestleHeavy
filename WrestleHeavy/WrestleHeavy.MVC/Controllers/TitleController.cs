@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WrestleHeavy.Data;
 using static Data.Entities.Repos;
 
 namespace WrestleHeavy.MVC.Controllers
@@ -13,6 +14,8 @@ namespace WrestleHeavy.MVC.Controllers
     [Authorize]
     public class TitleController : Controller
     {
+        ApplicationDbContext _db = new ApplicationDbContext();
+
         // GET: Title
         public ActionResult Index()
         {
